@@ -10,7 +10,7 @@
 #include "SSD1306Spi.h"
 // =========================== //
 
-//#define DEFAULT_SSID "pwned"
+#define DEFAULT_SSID "station_deauther"
 //#define HIGHLIGHT_LED 16
 
 // ===================== LED CONFIG ==================== //
@@ -47,7 +47,7 @@
 //   NEO_RGBW    Pixels are wired for RGBW bitstream (NeoPixel RGBW products)
 
 // ===================== DISPLAY CONFIG ==================== //
-#define USE_DISPLAY false // default display setting
+#define USE_DISPLAY true // default display setting
 
 /* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
     Adjust the pins to match your setup
@@ -67,7 +67,7 @@
    = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
 */
 #define DEAUTHER_DISPLAY SSD1306Wire display = SSD1306Wire(0x3c, 5, 4); // for 0.96" OLED
-//#define DEAUTHER_DISPLAY SH1106Wire display = SH1106Wire(0x3c, 5, 4); // for 1.3" OLED
+#define DEAUTHER_DISPLAY SH1106Wire display = SH1106Wire(0x3c, 5, 4); // for 1.3" OLED
 
 /*  RST = GPIO 5 (D1)
     DC = GPIO 4 (D2)
@@ -77,7 +77,7 @@
 //#define DEAUTHER_DISPLAY SSD1306Spi display = SSD1306Spi(5, 4, 15); // for 0.96" OLED with SPI
 //#define DEAUTHER_DISPLAY SH1106Spi display = SH1106Spi(5, 4, 15); // for 1.3" OLED with SPI
 
-//#define FLIP_DIPLAY // uncomment that to flip the display vertically
+#define FLIP_DIPLAY // uncomment that to flip the display vertically
 // ========================================================= //
 
 #endif
